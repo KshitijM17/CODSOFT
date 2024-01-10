@@ -10,3 +10,8 @@ a. Calculator.html
 b. calculator.css
 c. calculator.js
 
+To access the Landing page open the files 
+a. Landing.html
+b. Landing.css
+and all the rest files for images and fonts except that were used for Portfolio and Calculator
+
