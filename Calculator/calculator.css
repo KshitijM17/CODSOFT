@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d37070;
+    border: #333;
+  }
+  
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #333;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .display {
+    grid-column: span 4;
+    background-color: #444;
+    padding: 10px;
+    font-size: 2em;
+    text-align: right;
+    color: white;
+    border-bottom: 2px solid #555;
+    grid-row: 1;
+    height: 40px;
+  }
+  
+  button {
+    font-size: 1.2em;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #666;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  button:active {
+    background-color: #444;
+  }
+  
+  button:active,
+  button:active ~ button {
+    border-radius: 0;
+  }
+  
+  button:active,
+  button:active:after {
+    transition: none;
+  }
+  
+  button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid #444;
+    border-radius: 5px;
+    pointer-events: none;
+  }
+  
+  button:not(:last-child) {
+    border-right: 2px solid #444;
+  }
+  
+  button:active:not(:last-child) {
+    border-right: none;
+  }
+  
+  button:active:last-child {
+    border-radius: 0 0 5px 0;
+  }
+  
+  button:last-child {
+    border-radius: 0 0 0 5px;
+  }
+  .zero-button {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+    
+  }
+  
+  .zero-button button {
+    font-size: 1.5em;
+    
+  }
+    
